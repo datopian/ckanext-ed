@@ -1,0 +1,13 @@
+{% resource 'ed/js/bundle.js' %}
+
+{% ckan_extends %}
+  {{ super() }}
+
+  {% block primary_content_inner %}
+  <div>
+    </div>
+      <div id="dep-of-ed-admin-ui" data-config='{
+        "apiUrl": "{{h.url_for('api.action', ver=3, logic_function='', _external=True)}}",
+        "isMaster": true
+      }'></div>
+  {% endblock %}
